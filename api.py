@@ -61,7 +61,7 @@ def eth_getBlockByNumber():
 	else:
 		show_full_transaction = False
 
-	hex_checker(block_number)
+	hex_checker(block_number, 'Block Number')
 
 	api_obj = {
 		"jsonrpc": "2.0",
