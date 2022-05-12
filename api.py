@@ -24,6 +24,7 @@ def handle_api_error(error: APIError):
 
 @app.route('/getLatestBlockNumber', methods=['GET'])
 def eth_getlatestBlockByNumber():
+	"""An API Route to get the number of most recent block."""
 	api_obj = {
 		"jsonrpc": "2.0",
 		"method": "eth_blockNumber",
@@ -44,6 +45,7 @@ def eth_getlatestBlockByNumber():
 
 @app.route('/getBlockByNumber', methods=['POST'])
 def eth_getBlockByNumber():
+	"""An API Route to get the information about a block by block number."""
 	data = request.json
 
 	try:
@@ -83,6 +85,7 @@ def eth_getBlockByNumber():
 
 @app.route('/getTransactionByBlockNumberAndIndex', methods=['POST'])
 def eth_getTransactionByBlockNumberAndIndex():
+	"""An API Route to get the information about a transaction by block number and transaction index position."""
 	data = request.json
 
 	try:

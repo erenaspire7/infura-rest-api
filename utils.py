@@ -2,6 +2,7 @@ from exceptions import APIError
 
 
 def hex_checker(hex_value, param):
+	'''A validator for the hexademical value used to interact with infura'''
 	if hex_value[0:2] != '0x':
 		raise APIError(f'Not Acceptable - {param} must have "0x" prefix', 406)
 
